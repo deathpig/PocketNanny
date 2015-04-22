@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "674368B91AE730B300E89115"
+               BlueprintIdentifier = "67E7830A1AE7441200F83D86"
                BuildableName = "PocketNanny.app"
                BlueprintName = "PocketNanny"
                ReferencedContainer = "container:PocketNanny.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "674368D31AE730B300E89115"
+               BlueprintIdentifier = "67E7831F1AE7441200F83D86"
                BuildableName = "PocketNannyTests.xctest"
                BlueprintName = "PocketNannyTests"
                ReferencedContainer = "container:PocketNanny.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "674368D31AE730B300E89115"
+               BlueprintIdentifier = "67E7831F1AE7441200F83D86"
                BuildableName = "PocketNannyTests.xctest"
                BlueprintName = "PocketNannyTests"
                ReferencedContainer = "container:PocketNanny.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "674368B91AE730B300E89115"
+            BlueprintIdentifier = "67E7830A1AE7441200F83D86"
             BuildableName = "PocketNanny.app"
             BlueprintName = "PocketNanny"
             ReferencedContainer = "container:PocketNanny.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "674368B91AE730B300E89115"
+            BlueprintIdentifier = "67E7830A1AE7441200F83D86"
             BuildableName = "PocketNanny.app"
             BlueprintName = "PocketNanny"
             ReferencedContainer = "container:PocketNanny.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "674368B91AE730B300E89115"
+            BlueprintIdentifier = "67E7830A1AE7441200F83D86"
             BuildableName = "PocketNanny.app"
             BlueprintName = "PocketNanny"
             ReferencedContainer = "container:PocketNanny.xcodeproj">
