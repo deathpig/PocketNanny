@@ -1,0 +1,5 @@
+# Require version 2.3.1 or later
+github "ReactiveCocoa/ReactiveCocoa"# >= 2.3.1
+
+# Require version 1.x
+github "Mantle/Mantle" #~> 1.0    # (1.0 or later, but less than 2.0)
