@@ -15,6 +15,7 @@
 		674368DB1AE730B300E89115 /* PocketNannyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674368DA1AE730B300E89115 /* PocketNannyTests.swift */; };
 		67524EFC1AEB3AD800240B42 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67524EFA1AEB3AD800240B42 /* DetailViewController.swift */; };
 		67524EFD1AEB3AD800240B42 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67524EFB1AEB3AD800240B42 /* MasterViewController.swift */; };
+		67524F021AEB4E3900240B42 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67524F011AEB4E3900240B42 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		674368DA1AE730B300E89115 /* PocketNannyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketNannyTests.swift; sourceTree = "<group>"; };
 		67524EFA1AEB3AD800240B42 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		67524EFB1AEB3AD800240B42 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		67524F011AEB4E3900240B42 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67524F021AEB4E3900240B42 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		674368B11AE730B300E89115 = {
 			isa = PBXGroup;
 			children = (
+				67524F011AEB4E3900240B42 /* CoreData.framework */,
 				674368BC1AE730B300E89115 /* PocketNanny */,
 				674368D71AE730B300E89115 /* PocketNannyTests */,
 				674368BB1AE730B300E89115 /* Products */,

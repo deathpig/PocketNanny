@@ -49,6 +49,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
         newManagedObject.setValue(NSDate(), forKey: "timeStamp")
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components((.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay), fromDate: NSDate())
+        let tmp = "\(components.year * 10000 + components.month * 100 + components.day)"
+        newManagedObject.setValue(tmp, forKey: "sectionIdentifier")
              
         // Save the context.
         var error: NSError? = nil
@@ -90,6 +94,35 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let s = self.fetchedResultsController.sections as? [NSFetchedResultsSectionInfo] {
+            let theSection = s[section]
+            let formatter = NSDateFormatter()
+            formatter.calendar = NSCalendar.currentCalendar()
+            
+            let formatTemplate = NSDateFormatter.dateFormatFromTemplate("MMMM d, YYYY", options: 0, locale: NSLocale.currentLocale())
+            formatter.dateFormat = formatTemplate
+            if let numericSection = theSection.name?.toInt(){
+                let year = numericSection / 10000
+                let monthday = numericSection % 10000
+                let month = monthday / 100
+                let day = monthday % 100
+                
+                let dateComponents = NSDateComponents()
+                dateComponents.year = year
+                dateComponents.month = month
+                dateComponents.day = day
+                
+                if let date = NSCalendar.currentCalendar().dateFromComponents(dateComponents){
+                    let titleString = formatter.stringFromDate(date)
+                    return titleString
+                }
+                
+            }
+        }
+        return ""
+    }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
@@ -112,8 +145,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+        if let timeStamp = object.valueForKey("timeStamp") as? NSDate {
+            let f = NSDateFormatter()
+            f.dateStyle = NSDateFormatterStyle.ShortStyle;
+            
+        }
         cell.textLabel!.text = object.valueForKey("timeStamp")!.description
+        
     }
 
     // MARK: - Fetched results controller
@@ -139,7 +178,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: "sectionIdentifier", cacheName: "Master")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
