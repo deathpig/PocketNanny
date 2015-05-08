@@ -11,7 +11,7 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    var detailViewController: DetailViewController? = nil
+    var entryDetailViewController: EntryDetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
 
@@ -32,7 +32,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
+            self.entryDetailViewController = controllers[controllers.count-1].topViewController as? EntryDetailViewController
         }
     }
 
@@ -70,7 +70,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
             let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! EntryDetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -147,11 +147,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
         if let timeStamp = object.valueForKey("timeStamp") as? NSDate {
-            let f = NSDateFormatter()
-            f.dateStyle = NSDateFormatterStyle.ShortStyle;
-            
+            cell.textLabel!.text = timeStamp.formattedTimeOnly
         }
-        cell.textLabel!.text = object.valueForKey("timeStamp")!.description
         
     }
 

@@ -16,6 +16,8 @@
 		67524EFC1AEB3AD800240B42 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67524EFA1AEB3AD800240B42 /* DetailViewController.swift */; };
 		67524EFD1AEB3AD800240B42 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67524EFB1AEB3AD800240B42 /* MasterViewController.swift */; };
 		67524F021AEB4E3900240B42 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67524F011AEB4E3900240B42 /* CoreData.framework */; };
+		A25D25F11AFC345D00B49EF2 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */; };
+		A25D25F61AFC39D700B49EF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F51AFC39D700B49EF2 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		67524EFA1AEB3AD800240B42 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		67524EFB1AEB3AD800240B42 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		67524F011AEB4E3900240B42 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		A25D25F51AFC39D700B49EF2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				674368BF1AE730B300E89115 /* AppDelegate.swift */,
+				A25D25F41AFC399F00B49EF2 /* Utils */,
 				67524EF91AEB3AD800240B42 /* Controller */,
 				674368C81AE730B300E89115 /* Main.storyboard */,
 				674368CB1AE730B300E89115 /* Images.xcassets */,
@@ -126,8 +131,17 @@
 			children = (
 				67524EFA1AEB3AD800240B42 /* DetailViewController.swift */,
 				67524EFB1AEB3AD800240B42 /* MasterViewController.swift */,
+				A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A25D25F41AFC399F00B49EF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A25D25F51AFC39D700B49EF2 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25D25F11AFC345D00B49EF2 /* EntryDetailViewController.swift in Sources */,
+				A25D25F61AFC39D700B49EF2 /* Extensions.swift in Sources */,
 				67524EFD1AEB3AD800240B42 /* MasterViewController.swift in Sources */,
 				67524EFC1AEB3AD800240B42 /* DetailViewController.swift in Sources */,
 				674368C31AE730B300E89115 /* PocketNanny.xcdatamodeld in Sources */,
