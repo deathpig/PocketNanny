@@ -44,15 +44,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func insertNewObject(sender: AnyObject) {
         let context = self.fetchedResultsController.managedObjectContext
         let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! NSManagedObject
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! Event
              
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newManagedObject.setValue(NSDate(), forKey: "timeStamp")
+        newManagedObject.timeStamp = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components((.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay), fromDate: NSDate())
-        let tmp = "\(components.year * 10000 + components.month * 100 + components.day)"
-        newManagedObject.setValue(tmp, forKey: "sectionIdentifier")
+        newManagedObject.sectionIdentifier = "\(components.year * 10000 + components.month * 100 + components.day)"
              
         // Save the context.
         var error: NSError? = nil
@@ -69,7 +68,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Event
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! EntryDetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
@@ -132,7 +131,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let context = self.fetchedResultsController.managedObjectContext
-            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject)
+            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as! Event)
                 
             var error: NSError? = nil
             if !context.save(&error) {
@@ -145,11 +144,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-        if let timeStamp = object.valueForKey("timeStamp") as? NSDate {
-            cell.textLabel!.text = timeStamp.formattedTimeOnly
-        }
-        
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Event
+        let timeStamp = object.timeStamp
+        cell.textLabel!.text = timeStamp.formattedTimeOnly
     }
 
     // MARK: - Fetched results controller

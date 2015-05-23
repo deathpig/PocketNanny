@@ -18,6 +18,10 @@
 		67524F021AEB4E3900240B42 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67524F011AEB4E3900240B42 /* CoreData.framework */; };
 		A25D25F11AFC345D00B49EF2 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */; };
 		A25D25F61AFC39D700B49EF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F51AFC39D700B49EF2 /* Extensions.swift */; };
+		A2D487351B106372006A78A1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D487341B106372006A78A1 /* Event.swift */; };
+		A2D487371B106373006A78A1 /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D487361B106373006A78A1 /* Sleep.swift */; };
+		A2D487391B106373006A78A1 /* Diaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D487381B106373006A78A1 /* Diaper.swift */; };
+		A2D4873B1B106373006A78A1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4873A1B106373006A78A1 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		67524F011AEB4E3900240B42 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		A25D25F51AFC39D700B49EF2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A2D487341B106372006A78A1 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A2D487361B106373006A78A1 /* Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
+		A2D487381B106373006A78A1 /* Diaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diaper.swift; sourceTree = "<group>"; };
+		A2D4873A1B106373006A78A1 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				674368BF1AE730B300E89115 /* AppDelegate.swift */,
+				A2D487331B106368006A78A1 /* Model */,
 				A25D25F41AFC399F00B49EF2 /* Utils */,
 				67524EF91AEB3AD800240B42 /* Controller */,
 				674368C81AE730B300E89115 /* Main.storyboard */,
@@ -142,6 +151,17 @@
 				A25D25F51AFC39D700B49EF2 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A2D487331B106368006A78A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4873A1B106373006A78A1 /* Meal.swift */,
+				A2D487381B106373006A78A1 /* Diaper.swift */,
+				A2D487361B106373006A78A1 /* Sleep.swift */,
+				A2D487341B106372006A78A1 /* Event.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +264,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D4873B1B106373006A78A1 /* Meal.swift in Sources */,
 				A25D25F11AFC345D00B49EF2 /* EntryDetailViewController.swift in Sources */,
 				A25D25F61AFC39D700B49EF2 /* Extensions.swift in Sources */,
 				67524EFD1AEB3AD800240B42 /* MasterViewController.swift in Sources */,
 				67524EFC1AEB3AD800240B42 /* DetailViewController.swift in Sources */,
 				674368C31AE730B300E89115 /* PocketNanny.xcdatamodeld in Sources */,
+				A2D487351B106372006A78A1 /* Event.swift in Sources */,
 				674368C01AE730B300E89115 /* AppDelegate.swift in Sources */,
+				A2D487391B106373006A78A1 /* Diaper.swift in Sources */,
+				A2D487371B106373006A78A1 /* Sleep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

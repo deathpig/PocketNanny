@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 extension NSDate {
     var formattedTimeOnly: String {
@@ -24,4 +25,16 @@ extension NSDate {
         formatter.locale = NSLocale.currentLocale()
         return formatter.stringFromDate(self)
     }
+}
+
+extension NSManagedObject {
+    class public func entityName() -> String {
+        let fullClassName: String = NSStringFromClass(object_getClass(self))
+        let classNameComponents: [String] = split(fullClassName) { $0 == "." }
+        return last(classNameComponents)!
+     }
+
+    class public func insertNewObjectInContext(context: NSManagedObjectContext) -> AnyObject {
+        return NSEntityDescription.insertNewObjectForEntityForName(entityName(), inManagedObjectContext: context)
+     }
 }
