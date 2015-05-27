@@ -10,12 +10,13 @@
 		674368C01AE730B300E89115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674368BF1AE730B300E89115 /* AppDelegate.swift */; };
 		674368C31AE730B300E89115 /* PocketNanny.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 674368C11AE730B300E89115 /* PocketNanny.xcdatamodeld */; };
 		674368CA1AE730B300E89115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674368C81AE730B300E89115 /* Main.storyboard */; };
-		674368CC1AE730B300E89115 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674368CB1AE730B300E89115 /* Images.xcassets */; };
 		674368CF1AE730B300E89115 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 674368CD1AE730B300E89115 /* LaunchScreen.xib */; };
 		674368DB1AE730B300E89115 /* PocketNannyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674368DA1AE730B300E89115 /* PocketNannyTests.swift */; };
 		67524EFC1AEB3AD800240B42 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67524EFA1AEB3AD800240B42 /* DetailViewController.swift */; };
 		67524EFD1AEB3AD800240B42 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67524EFB1AEB3AD800240B42 /* MasterViewController.swift */; };
 		67524F021AEB4E3900240B42 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67524F011AEB4E3900240B42 /* CoreData.framework */; };
+		A21059861B12131F007C26AC /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21059851B12131F007C26AC /* EntryTableViewCell.swift */; };
+		A23AB6C91B16047600D4B2D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23AB6C81B16047600D4B2D3 /* Images.xcassets */; };
 		A25D25F11AFC345D00B49EF2 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */; };
 		A25D25F61AFC39D700B49EF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F51AFC39D700B49EF2 /* Extensions.swift */; };
 		A2D487351B106372006A78A1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D487341B106372006A78A1 /* Event.swift */; };
@@ -40,7 +41,6 @@
 		674368BF1AE730B300E89115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		674368C21AE730B300E89115 /* PocketNanny.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocketNanny.xcdatamodel; sourceTree = "<group>"; };
 		674368C91AE730B300E89115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		674368CB1AE730B300E89115 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		674368CE1AE730B300E89115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		674368D41AE730B300E89115 /* PocketNannyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketNannyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		674368D91AE730B300E89115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		67524EFA1AEB3AD800240B42 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		67524EFB1AEB3AD800240B42 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		67524F011AEB4E3900240B42 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A21059851B12131F007C26AC /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		A23AB6C81B16047600D4B2D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		A25D25F51AFC39D700B49EF2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A2D487341B106372006A78A1 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -102,8 +104,8 @@
 				A25D25F41AFC399F00B49EF2 /* Utils */,
 				67524EF91AEB3AD800240B42 /* Controller */,
 				674368C81AE730B300E89115 /* Main.storyboard */,
-				674368CB1AE730B300E89115 /* Images.xcassets */,
 				674368CD1AE730B300E89115 /* LaunchScreen.xib */,
+				A23AB6C81B16047600D4B2D3 /* Images.xcassets */,
 				674368C11AE730B300E89115 /* PocketNanny.xcdatamodeld */,
 				674368BD1AE730B300E89115 /* Supporting Files */,
 			);
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				67524EFA1AEB3AD800240B42 /* DetailViewController.swift */,
+				A21059851B12131F007C26AC /* EntryTableViewCell.swift */,
 				67524EFB1AEB3AD800240B42 /* MasterViewController.swift */,
 				A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */,
 			);
@@ -244,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23AB6C91B16047600D4B2D3 /* Images.xcassets in Resources */,
 				674368CA1AE730B300E89115 /* Main.storyboard in Resources */,
 				674368CF1AE730B300E89115 /* LaunchScreen.xib in Resources */,
-				674368CC1AE730B300E89115 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +277,7 @@
 				674368C01AE730B300E89115 /* AppDelegate.swift in Sources */,
 				A2D487391B106373006A78A1 /* Diaper.swift in Sources */,
 				A2D487371B106373006A78A1 /* Sleep.swift in Sources */,
+				A21059861B12131F007C26AC /* EntryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

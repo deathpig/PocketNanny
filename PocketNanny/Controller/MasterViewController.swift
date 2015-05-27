@@ -89,7 +89,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("EntryCell", forIndexPath: indexPath) as! EntryTableViewCell
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -143,10 +143,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
 
-    func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+    func configureCell(cell: EntryTableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Event
         let timeStamp = object.timeStamp
-        cell.textLabel!.text = timeStamp.formattedTimeOnly
+//        cell.textLabel!.text = timeStamp.formattedTimeOnly
+        cell.timeStamp!.text  = timeStamp.formattedTimeOnly
+        
     }
 
     // MARK: - Fetched results controller
@@ -210,7 +212,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .Delete:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
             case .Update:
-                self.configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, atIndexPath: indexPath!)
+                let cell = tableView.cellForRowAtIndexPath(indexPath!) as! EntryTableViewCell
+                self.configureCell(cell, atIndexPath: indexPath!)
             case .Move:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
                 tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
