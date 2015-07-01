@@ -225,7 +225,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             cell.detailLabel!.text = "test"
         }
         if let sleep = object.sleep as? Sleep {
-            cell.typeImage.image = UIImage(named: "babyBottle")
+            cell.typeImage.image = UIImage(named: "sleeping")
+            cell.detailLabel!.text = "test"
+        }
+        if let diaper = object.diaper as? Diaper {
+            cell.typeImage.image = UIImage(named: "diaper")
             cell.detailLabel!.text = "test"
         }
     }
