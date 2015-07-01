@@ -16,6 +16,8 @@
 		67524EFD1AEB3AD800240B42 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67524EFB1AEB3AD800240B42 /* MasterViewController.swift */; };
 		67524F021AEB4E3900240B42 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67524F011AEB4E3900240B42 /* CoreData.framework */; };
 		A21059861B12131F007C26AC /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21059851B12131F007C26AC /* EntryTableViewCell.swift */; };
+		A22ED12A1B33786900428A6C /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A22ED1271B33786900428A6C /* AwesomeMenu.m */; };
+		A22ED12B1B33786900428A6C /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A22ED1291B33786900428A6C /* AwesomeMenuItem.m */; };
 		A23AB6C91B16047600D4B2D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23AB6C81B16047600D4B2D3 /* Images.xcassets */; };
 		A25D25F11AFC345D00B49EF2 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */; };
 		A25D25F61AFC39D700B49EF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D25F51AFC39D700B49EF2 /* Extensions.swift */; };
@@ -49,6 +51,11 @@
 		67524EFB1AEB3AD800240B42 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		67524F011AEB4E3900240B42 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A21059851B12131F007C26AC /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		A22ED1261B33786900428A6C /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		A22ED1271B33786900428A6C /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		A22ED1281B33786900428A6C /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		A22ED1291B33786900428A6C /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
+		A22ED12C1B3378C900428A6C /* PocketNanny-Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PocketNanny-Bridging.h"; sourceTree = "<group>"; };
 		A23AB6C81B16047600D4B2D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A25D25F01AFC345D00B49EF2 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		A25D25F51AFC39D700B49EF2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -116,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				674368BE1AE730B300E89115 /* Info.plist */,
+				A22ED12C1B3378C900428A6C /* PocketNanny-Bridging.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -148,10 +156,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A22ED11F1B33785A00428A6C /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A22ED1261B33786900428A6C /* AwesomeMenu.h */,
+				A22ED1271B33786900428A6C /* AwesomeMenu.m */,
+				A22ED1281B33786900428A6C /* AwesomeMenuItem.h */,
+				A22ED1291B33786900428A6C /* AwesomeMenuItem.m */,
+			);
+			path = AwesomeMenu;
+			sourceTree = "<group>";
+		};
 		A25D25F41AFC399F00B49EF2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				A25D25F51AFC39D700B49EF2 /* Extensions.swift */,
+				A22ED11F1B33785A00428A6C /* AwesomeMenu */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -273,9 +293,11 @@
 				67524EFD1AEB3AD800240B42 /* MasterViewController.swift in Sources */,
 				67524EFC1AEB3AD800240B42 /* DetailViewController.swift in Sources */,
 				674368C31AE730B300E89115 /* PocketNanny.xcdatamodeld in Sources */,
+				A22ED12A1B33786900428A6C /* AwesomeMenu.m in Sources */,
 				A2D487351B106372006A78A1 /* Event.swift in Sources */,
 				674368C01AE730B300E89115 /* AppDelegate.swift in Sources */,
 				A2D487391B106373006A78A1 /* Diaper.swift in Sources */,
+				A22ED12B1B33786900428A6C /* AwesomeMenuItem.m in Sources */,
 				A2D487371B106373006A78A1 /* Sleep.swift in Sources */,
 				A21059861B12131F007C26AC /* EntryTableViewCell.swift in Sources */,
 			);
@@ -406,9 +428,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PocketNanny/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PocketNanny/PocketNanny-Bridging.h";
 			};
 			name = Debug;
 		};
@@ -416,9 +440,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PocketNanny/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PocketNanny/PocketNanny-Bridging.h";
 			};
 			name = Release;
 		};

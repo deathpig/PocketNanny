@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate, AwesomeMenuDelegate {
 
     var window: UIWindow?
 
@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
+        
+        let menu = AwesomeMenu(frame: self.window!.bounds, startItem: AwesomeMenuItem(image: UIImage(named: "babyBottle")), menuItems: [AwesomeMenuItem(image: UIImage(named: "sleeping"))])
+        menu.delegate = self
+        self.window!.addSubview(menu)
         return true
     }
 
@@ -128,5 +132,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
     }
 
+    // MARK: - AwesomeMenuDelegate
+    func awesomeMenu(menu: AwesomeMenu!, didSelectIndex idx: Int) {
+        
+    }
 }
 

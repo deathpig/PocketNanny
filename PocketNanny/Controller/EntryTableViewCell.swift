@@ -11,6 +11,8 @@ import UIKit
 class EntryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet weak var typeImage: UIImageView!
+    @IBOutlet weak var detailLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
